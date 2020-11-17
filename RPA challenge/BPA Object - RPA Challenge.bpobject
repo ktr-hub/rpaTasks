@@ -1,0 +1,102 @@
+﻿<process name="rpaChallenge" version="1.0" bpversion="6.9.0.26970" narrative="Data from Excel to form submission" byrefcollection="true" type="object" runmode="Exclusive" preferredid="e3646a0d-771a-45fd-a181-846f7e462b11">
+  <appdef />
+  <view>
+    <camerax>0</camerax>
+    <cameray>0</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="a8177ff9-09e1-4d21-a025-98b9cc4ce9b9" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="5e3d9fda-1da5-4af3-9381-365c954e1f8e" type="Normal" published="False">
+    <name>Action 1</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="860dbded-ce81-45e3-aafa-4ba6ac330863" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>8455363f-9ed4-4213-b847-afea77640c70</onsuccess>
+  </stage>
+  <stage stageid="8455363f-9ed4-4213-b847-afea77640c70" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="561ed908-707b-46c2-b527-b26f6dbaad50" name="Stage1" type="ProcessInfo">
+    <display x="-195" y="-105" w="150" h="90" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>System.Data</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="e242827e-a609-43b2-9824-00168f64995e" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>a8177ff9-09e1-4d21-a025-98b9cc4ce9b9</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="90d51aaa-96e3-40ea-930b-2641c154cc64" name="Start" type="Start">
+    <subsheetid>a8177ff9-09e1-4d21-a025-98b9cc4ce9b9</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>eeda9904-9890-4d36-9433-dc75814a7c1a</onsuccess>
+  </stage>
+  <stage stageid="eeda9904-9890-4d36-9433-dc75814a7c1a" name="End" type="End">
+    <subsheetid>a8177ff9-09e1-4d21-a025-98b9cc4ce9b9</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="7e6260c6-7e08-415e-9344-89e4ef44492c" name="Action 1" type="SubSheetInfo">
+    <subsheetid>5e3d9fda-1da5-4af3-9381-365c954e1f8e</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="79d65698-2dab-4e49-81c6-699424e89c45" name="Start" type="Start">
+    <subsheetid>5e3d9fda-1da5-4af3-9381-365c954e1f8e</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+  </stage>
+  <stage stageid="cc9032c8-9542-43ae-99a1-9b5ea3311c6f" name="End" type="End">
+    <subsheetid>5e3d9fda-1da5-4af3-9381-365c954e1f8e</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="3a5626b0-39c8-43c9-bc95-f002b54a956c" name="" type="Note">
+    <subsheetid>a8177ff9-09e1-4d21-a025-98b9cc4ce9b9</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="baea8eac-bb1d-4f30-93c4-b09f2616795b" name="" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+</process>
